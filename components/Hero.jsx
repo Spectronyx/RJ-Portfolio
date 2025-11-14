@@ -24,7 +24,7 @@ export default function Home() {
             <section id="contact" className="scroll-mt-24">
                 <Contact />
             </section>
-
+            //This is teh footer section
             <Footer />
         </main>
     );
