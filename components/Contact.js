@@ -9,6 +9,8 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 
+
+
 export default function Contact() {
     const [form, setForm] = useState({
         name: "",
@@ -30,12 +32,16 @@ export default function Contact() {
             body: JSON.stringify(form),
         });
 
+        const data = await res.json();
+        console.log("RESPONSE:", data);
+
         if (res.ok) {
             alert("Message sent 🚀");
         } else {
-            alert("Failed to send 😓");
+            alert(data.error || "Failed to send 😓");
         }
     };
+    
     return (
         <section className="py-24 px-6 md:px-20 relative z-10 flex items-center justify-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl">
@@ -88,7 +94,7 @@ export default function Contact() {
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-10 rounded-3xl shadow-2xl"
                 >
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                         {/* NAME INPUT */}
                         <div className="group">
                             <label className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-cyan-400 transition-colors">
@@ -110,6 +116,8 @@ export default function Contact() {
                             </label>
                             <input
                                 type="email"
+                                name="email"
+                                onChange={handleChange}
                                 className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
                                 placeholder="john@example.com"
                             />
@@ -122,6 +130,8 @@ export default function Contact() {
                             </label>
                             <textarea
                                 rows="4"
+                                name="message"
+                                onChange={handleChange}
                                 className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
                                 placeholder="Hey Rajneesh, I have a project for you..."
                             ></textarea>
