@@ -15,7 +15,9 @@ export default function Footer() {
                 {/* Social Icons */}
                 <div className="flex gap-6">
                     <a
-                        href="#"
+                        href="https://github.com/Spectronyx"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-gray-400 hover:text-cyan-400 transition-colors"
                     >
                         <FaGithub size={20} />

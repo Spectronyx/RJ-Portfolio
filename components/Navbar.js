@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
 
 // UPDATE THESE LINKS
 const navLinks = [
@@ -40,6 +41,15 @@ export default function Navbar() {
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                 ))}
+                <a
+                    href="https://github.com/Spectronyx/RJ-Portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                    title="View GitHub Repository"
+                >
+                    <FaGithub size={20} />
+                </a>
             </div>
 
             {/* Mobile Menu Icon (Visual only for now) */}
