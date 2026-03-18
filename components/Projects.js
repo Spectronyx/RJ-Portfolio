@@ -84,7 +84,10 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-24 px-6 md:px-20 relative z-10 scroll-mt-24">
+        <section
+            id="projects"
+            className="py-24 px-6 md:px-20 relative z-10 scroll-mt-24"
+        >
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +100,8 @@ export default function Projects() {
                 </h2>
                 <div className="w-16 h-1 bg-cyan-400 mx-auto rounded-full mb-6"></div>
                 <p className="text-gray-400 max-w-2xl mx-auto italic">
-                    A selection of my recent work across various domains of software engineering.
+                    A selection of my recent work across various domains of
+                    software engineering.
                 </p>
             </motion.div>
 
@@ -110,12 +114,14 @@ export default function Projects() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: true, margin: "-100px" }}
                         className={`flex flex-col ${
-                            index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                            index % 2 === 0 ?
+                                "md:flex-row"
+                            :   "md:flex-row-reverse"
                         } gap-12 items-center`}
                     >
                         {/* PROJECT VISUAL/GRADIENT */}
                         <div className="w-full md:w-1/2 group cursor-pointer">
-                            <motion.div 
+                            <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
                                 className={`relative h-64 md:h-80 rounded-3xl bg-linear-to-br ${project.color} overflow-hidden flex items-center justify-center p-8`}
@@ -143,7 +149,10 @@ export default function Projects() {
                                     href={project.github}
                                     className="flex items-center gap-2 px-6 py-2 rounded-full border border-white/10 bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all group"
                                 >
-                                    <FaGithub size={20} className="group-hover:scale-110 transition-transform" /> 
+                                    <FaGithub
+                                        size={20}
+                                        className="group-hover:scale-110 transition-transform"
+                                    />
                                     <span>Source Code</span>
                                 </a>
                                 <a
@@ -151,7 +160,10 @@ export default function Projects() {
                                     className="flex items-center gap-2 px-6 py-2 rounded-full bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition-all group"
                                 >
                                     <span>Live Demo</span>
-                                    <FaExternalLinkAlt size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                    <FaExternalLinkAlt
+                                        size={16}
+                                        className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                                    />
                                 </a>
                             </div>
                         </div>
