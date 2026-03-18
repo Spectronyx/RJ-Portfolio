@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 
 // UPDATE THESE LINKS
 const navLinks = [
-    { name: "Home", href: "#home" }, // Points to Hero
-    { name: "Projects", href: "#projects" }, // Points to Projects
-    { name: "Contact", href: "#contact" }, // Points to Contact
+    { name: "Home", href: "#home" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
