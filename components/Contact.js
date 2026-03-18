@@ -36,22 +36,18 @@ export default function Contact() {
                                 <FaEnvelope size={24} />
                             </div>
                             <span className="text-lg">
-                                rajneesh.sharma@example.com
+                                rajneesh.sharma2407@gmail.com
                             </span>
                         </div>
 
                         <div className="flex gap-4 mt-4">
                             <a
-                                href="#"
+                                href="https://www.linkedin.com/in/rajneesh5566/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="p-4 bg-white/5 rounded-full border border-white/10 hover:bg-cyan-400 hover:text-black transition-all duration-300"
                             >
                                 <FaLinkedin size={24} />
-                            </a>
-                            <a
-                                href="#"
-                                className="p-4 bg-white/5 rounded-full border border-white/10 hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                            >
-                                <FaTwitter size={24} />
                             </a>
                         </div>
                     </div>

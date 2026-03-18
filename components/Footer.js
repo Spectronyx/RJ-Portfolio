@@ -23,16 +23,12 @@ export default function Footer() {
                         <FaGithub size={20} />
                     </a>
                     <a
-                        href="#"
+                        href="https://www.linkedin.com/in/rajneesh5566/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-gray-400 hover:text-cyan-400 transition-colors"
                     >
                         <FaLinkedin size={20} />
-                    </a>
-                    <a
-                        href="#"
-                        className="text-gray-400 hover:text-cyan-400 transition-colors"
-                    >
-                        <FaTwitter size={20} />
                     </a>
                 </div>
             </div>

@@ -14,7 +14,6 @@ import {
     SiMongodb,
     SiExpress,
     SiTailwindcss,
-    SiReplit,
     SiPostgresql,
     SiFlask,
     SiOpenai,
@@ -26,9 +25,9 @@ const projects = [
         title: "Secure File Management",
         description:
             "A comprehensive operating systems project focused on multi-level authentication, advanced encryption, and proactive threat detection (CSE316). It provides a secure environment for managing sensitive files with granular access controls.",
-        tech: [<FaLock />, <SiReplit />],
-        link: "#",
-        github: "#",
+        tech: [<FaLock />, <FaPython />],
+        link: "https://securefilemanager.onrender.com",
+        github: "https://github.com/Spectronyx/SecureFileManager",
         color: "from-red-500 to-orange-600",
     },
     {
@@ -37,8 +36,8 @@ const projects = [
         description:
             "An interactive web application built with React that visualizes complex algorithms like BFS & DFS. It features real-time animations, customizable grids, and obstacle placement to help students better understand graph traversal.",
         tech: [<FaReact />, <SiExpress />, <SiPostgresql />],
-        link: "#",
-        github: "#",
+        link: "https://grafalgovisualizer.netlify.app/",
+        github: "https://github.com/Spectronyx/BFS_DFS-Visualizer",
         color: "from-cyan-400 to-blue-600",
     },
     {
@@ -48,7 +47,7 @@ const projects = [
             "A smart NLP-based assistant that automatically processes incoming emails, generates concise summaries, and extracts important deadlines. Built with Python and OpenAI integration to streamline personal inbox management.",
         tech: [<FaPython />, <SiFlask />, <SiOpenai />, <FaEnvelope />],
         link: "#",
-        github: "#",
+        github: "",
         color: "from-purple-500 to-indigo-600",
     },
     {
@@ -57,18 +56,18 @@ const projects = [
         description:
             "A full-stack MERN application designed to manage buildings, individual rooms, and tenant payment tracking. It features dedicated Admin and Student dashboards with automated billing and status updates.",
         tech: [<SiMongodb />, <SiExpress />, <FaReact />, <FaNodeJs />],
-        link: "#",
-        github: "#",
+        link: "https://rent-manager-app.vercel.app/dashboard",
+        github: "https://github.com/Spectronyx/rent-manager-app",
         color: "from-green-400 to-emerald-600",
     },
     {
         id: 5,
-        title: "Twitter Sentiment Analysis",
+        title: "IMDB Sentiment Analysis",
         description:
-            "A powerful machine learning model that analyzes real-time tweet sentiments. Integrated with a dynamic Python/React dashboard for visualizing public opinion trends and keyword distributions.",
+            "A powerful machine learning model that analyzes real-time IMDB reviews sentiments. Integrated with a dynamic Python/React dashboard for visualizing public opinion trends and keyword distributions.",
         tech: [<FaPython />, <FaReact />, <SiTailwindcss />],
-        link: "#",
-        github: "#",
+        link: "https://github.com/Spectronyx/IMDB-Sentiment-Analysis",
+        github: "https://github.com/Spectronyx/IMDB-Sentiment-Analysis",
         color: "from-blue-400 to-indigo-600",
     },
     {
@@ -77,8 +76,8 @@ const projects = [
         description:
             "A robust and secure authentication system implementing JSON Web Tokens (JWT) with Access and Refresh token logic. It includes Bcrypt hashing, secure cookie storage, and scalable user management.",
         tech: [<FaNodeJs />, <SiExpress />, <SiMongodb />],
-        link: "#",
-        github: "#",
+        link: "https://authentication-system-rouge.vercel.app/",
+        github: "https://github.com/Spectronyx/Authentication-System",
         color: "from-pink-500 to-rose-600",
     },
 ];
