@@ -78,7 +78,7 @@ export default function Contact() {
                                 <FaEnvelope size={24} />
                             </div>
                             <span className="text-lg">
-                                rajneesh.sharma2407@gmail.com
+                                <a href="mailto:rajneesh.sharma2407@gmail.com">rajneesh.sharma2407@gmail.com</a>
                             </span>
                         </div>
 
@@ -103,7 +103,10 @@ export default function Contact() {
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-10 rounded-3xl shadow-2xl"
                 >
-                    <form className="space-y-6" onSubmit={handleSubmit}>
+                    <form
+                        className="space-y-6"
+                        onSubmit={handleSubmit}
+                    >
                         {/* NAME INPUT */}
                         <div className="group">
                             <label className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-cyan-400 transition-colors">
@@ -151,10 +154,15 @@ export default function Contact() {
                             type="submit"
                             disabled={isSending}
                             className={`w-full bg-linear-to-r from-cyan-500 to-blue-500 text-white font-bold py-4 rounded-lg transform transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.4)] ${
-                                isSending ? "opacity-70 cursor-not-allowed" : "hover:opacity-90 hover:scale-[1.02]"
+                                isSending ?
+                                    "opacity-70 cursor-not-allowed"
+                                :   "hover:opacity-90 hover:scale-[1.02]"
                             }`}
                         >
-                            {isSending ? "Sending..." : "Send Message"} <FaPaperPlane className={isSending ? "animate-bounce" : ""} />
+                            {isSending ? "Sending..." : "Send Message"}{" "}
+                            <FaPaperPlane
+                                className={isSending ? "animate-bounce" : ""}
+                            />
                         </button>
                     </form>
                 </motion.div>

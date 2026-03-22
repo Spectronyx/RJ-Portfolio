@@ -35,7 +35,11 @@ const projects = [
         title: "Pathfinding Visualizer",
         description:
             "An interactive web application built with React that visualizes complex algorithms like BFS & DFS. It features real-time animations, customizable grids, and obstacle placement to help students better understand graph traversal.",
-        tech: [<FaReact key="react" />, <SiExpress key="express" />, <SiPostgresql key="pg" />],
+        tech: [
+            <FaReact key="react" />,
+            <SiExpress key="express" />,
+            <SiPostgresql key="pg" />,
+        ],
         link: "https://grafalgovisualizer.netlify.app/",
         github: "https://github.com/Spectronyx/BFS_DFS-Visualizer",
         color: "from-cyan-400 to-blue-600",
@@ -45,9 +49,14 @@ const projects = [
         title: "AI Mail Summarizer",
         description:
             "A smart NLP-based assistant that automatically processes incoming emails, generates concise summaries, and extracts important deadlines. Built with Python and OpenAI integration to streamline personal inbox management.",
-        tech: [<FaPython key="python" />, <SiFlask key="flask" />, <SiOpenai key="openai" />, <FaEnvelope key="mail" />],
-        link: "#",
-        github: "",
+        tech: [
+            <FaPython key="python" />,
+            <SiFlask key="flask" />,
+            <SiOpenai key="openai" />,
+            <FaEnvelope key="mail" />,
+        ],
+        link: "https://smart-mail-box-app.vercel.app/",
+        github: "https://github.com/Spectronyx/SmartMailBoxApp/",
         color: "from-purple-500 to-indigo-600",
     },
     {
@@ -55,7 +64,12 @@ const projects = [
         title: "Room Rent Manager",
         description:
             "A full-stack MERN application designed to manage buildings, individual rooms, and tenant payment tracking. It features dedicated Admin and Student dashboards with automated billing and status updates.",
-        tech: [<SiMongodb key="mongo" />, <SiExpress key="express" />, <FaReact key="react" />, <FaNodeJs key="node" />],
+        tech: [
+            <SiMongodb key="mongo" />,
+            <SiExpress key="express" />,
+            <FaReact key="react" />,
+            <FaNodeJs key="node" />,
+        ],
         link: "https://rent-manager-app.vercel.app/dashboard",
         github: "https://github.com/Spectronyx/rent-manager-app",
         color: "from-green-400 to-emerald-600",
@@ -65,9 +79,13 @@ const projects = [
         title: "IMDB Sentiment Analysis",
         description:
             "A powerful machine learning model that analyzes real-time IMDB reviews sentiments. Integrated with a dynamic Python/React dashboard for visualizing public opinion trends and keyword distributions.",
-        tech: [<FaPython key="python" />, <FaReact key="react" />, <SiTailwindcss key="tailwind" />],
-        link: "https://github.com/Spectronyx/IMDB-Sentiment-Analysis",
-        github: "https://github.com/Spectronyx/IMDB-Sentiment-Analysis",
+        tech: [
+            <FaPython key="python" />,
+            <FaReact key="react" />,
+            <SiTailwindcss key="tailwind" />,
+        ],
+        link: "https://github.com/Spectronyx/IMDB_Sentiment_Analysis",
+        github: "https://github.com/Spectronyx/IMDB_Sentiment_Analysis",
         color: "from-blue-400 to-indigo-600",
     },
     {
@@ -75,7 +93,11 @@ const projects = [
         title: "JWT Auth System",
         description:
             "A robust and secure authentication system implementing JSON Web Tokens (JWT) with Access and Refresh token logic. It includes Bcrypt hashing, secure cookie storage, and scalable user management.",
-        tech: [<FaNodeJs key="node" />, <SiExpress key="express" />, <SiMongodb key="mongo" />],
+        tech: [
+            <FaNodeJs key="node" />,
+            <SiExpress key="express" />,
+            <SiMongodb key="mongo" />,
+        ],
         link: "https://authentication-system-rouge.vercel.app/",
         github: "https://github.com/Spectronyx/Authentication-System",
         color: "from-pink-500 to-rose-600",
