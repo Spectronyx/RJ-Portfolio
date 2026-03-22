@@ -17,28 +17,37 @@ export default function Contact() {
         email: "",
         message: "",
     });
+    const [isSending, setIsSending] = useState(false);
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSending(true);
 
-        const res = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(form),
-        });
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(form),
+            });
 
-        const data = await res.json();
-        console.log("RESPONSE:", data);
-
-        if (res.ok) {
-            alert("Message sent 🚀");
-        } else {
-            alert(data.error || "Failed to send 😓");
+            const data = await res.json();
+            
+            if (res.ok) {
+                alert("Message sent 🚀");
+                setForm({ name: "", email: "", message: "" });
+            } else {
+                alert(data.error || "Failed to send 😓");
+            }
+        } catch (error) {
+            console.error("SUBMIT ERROR:", error);
+            alert("An error occurred. Please try again.");
+        } finally {
+            setIsSending(false);
         }
     };
     
@@ -140,9 +149,12 @@ export default function Contact() {
                         {/* SEND BUTTON */}
                         <button
                             type="submit"
-                            className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-4 rounded-lg hover:opacity-90 transform hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.4)]"
+                            disabled={isSending}
+                            className={`w-full bg-linear-to-r from-cyan-500 to-blue-500 text-white font-bold py-4 rounded-lg transform transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.4)] ${
+                                isSending ? "opacity-70 cursor-not-allowed" : "hover:opacity-90 hover:scale-[1.02]"
+                            }`}
                         >
-                            Send Message <FaPaperPlane />
+                            {isSending ? "Sending..." : "Send Message"} <FaPaperPlane className={isSending ? "animate-bounce" : ""} />
                         </button>
                     </form>
                 </motion.div>

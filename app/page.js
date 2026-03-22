@@ -1,8 +1,12 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import SkillsGrid from "@/components/SkillsGrid";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+
+const Projects = dynamic(() => import("@/components/Projects"), { ssr: false });
+const Contact = dynamic(() => import("@/components/Contact"), { ssr: false });
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 
 export default function Home() {
     return (
